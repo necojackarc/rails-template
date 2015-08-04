@@ -1,3 +1,8 @@
+# Create .gitignore
+run "gibo OSX Linux Ruby Rails Vim > .gitignore" rescue nil
+gsub_file ".gitignore", /^config\/initializers\/secret_token.rb\n/, ""
+gsub_file ".gitignore", /^config\/secrets.yml\n/, ""
+
 # Gems
 gem "slim-rails"
 gem "draper"
@@ -153,6 +158,13 @@ StringLiterals:
 WordArray:
   MinSize: 3
 EOS
+
+# Remove comment and empty lines
+empty_line_pattern = /^\s*\n/
+comment_line_pattern = /^\s*#.*\n/
+
+gsub_file ".gitignore", comment_line_pattern, ""
+gsub_file "Gemfile", comment_line_pattern, ""
 
 # Remove files
 remove_file 'README.rdoc'

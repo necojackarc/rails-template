@@ -1,6 +1,9 @@
 # Rails template
 My Rails Application Template
 
+## Requirements
+- [simonwhitaker / gibo](https://github.com/simonwhitaker/gibo)
+
 ## Usage
 ```bash
 $ rails new :appname -BT -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
