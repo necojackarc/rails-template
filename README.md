@@ -6,7 +6,7 @@ My Rails Application Template
 
 ## Usage
 ```bash
-$ rails new :appname -BT -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
+$ rails new :appname -d :dbname -BT -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
 ```
 
 ## Additional information
