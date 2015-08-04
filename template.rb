@@ -162,7 +162,7 @@ WordArray:
 EOS
 
 # Setup spring
-run 'bundle exec spring binstub --all'
+run 'bundle exec spring binstub rspec'
 
 # Remove comment and empty lines
 empty_line_pattern = /^\s*\n/
