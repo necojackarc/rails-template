@@ -155,10 +155,6 @@ MethodLength:
 # Prefer double_quotes strings unless your string literal contains escape chars
 StringLiterals:
   EnforcedStyle: double_quotes
-
-# Prefer `%w`/`%W` when an array have more than 4 words (non-empty strings without spaces)
-WordArray:
-  MinSize: 3
 EOS
 
 # Setup spring
