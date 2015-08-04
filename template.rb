@@ -28,7 +28,7 @@ gem_group :test do
 end
 
 # Install gems
-run "bundle install --path vendor/bundle --jobs=4"
+run "bundle install --jobs=4"
 
 # Convert erb to slim
 run "bundle exec erb2slim -d app/views"
@@ -159,8 +159,3 @@ remove_file 'README.rdoc'
 
 # Rename files
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss"
-
-# Initial commit
-git :init
-git add: '.'
-git commit: "-m 'Initial commit'"
