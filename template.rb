@@ -22,6 +22,8 @@ gem_group :development, :test do
 
   gem "hirb"
   gem "hirb-unicode"
+
+  gem "spring-commands-rspec"
 end
 
 gem_group :test do
@@ -158,6 +160,9 @@ StringLiterals:
 WordArray:
   MinSize: 3
 EOS
+
+# Setup spring
+run 'bundle exec spring binstub --all'
 
 # Remove comment and empty lines
 empty_line_pattern = /^\s*\n/
