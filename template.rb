@@ -23,6 +23,8 @@ gem_group :test do
   gem "rspec-rails"
   gem "rspec-its"
   gem "factory_girl_rails"
+  gem "capybara"
+  gem "capybara-webkit"
 end
 
 # Install gems
