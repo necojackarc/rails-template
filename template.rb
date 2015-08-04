@@ -63,10 +63,10 @@ I18n.enforce_available_locales = true
 end
 
 # Setup rspec
-#   Reference: [necojackarc/.pryrc.yml](https://gist.github.com/necojackarc/4b747325a55a1f9deeb0)
 generate "rspec:install"
 
 # Create .pryrc
+#   Reference: [necojackarc/.pryrc.yml](https://gist.github.com/necojackarc/4b747325a55a1f9deeb0)
 create_file ".pryrc", <<EOS
 # awesome_print
 begin
