@@ -122,7 +122,11 @@ AllCops:
     - '**/Rakefile'
     - '**/config.ru'
   Exclude:
-    - 'vendor/**'
+    - 'vendor/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'db/**/*'
 
 # Top-level documentation of clases and modules are needless
 Documentation:
