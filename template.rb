@@ -140,6 +140,10 @@ MultilineBlockChain:
 Lambda:
   Enabled: false
 
+# Both nested and compact are okay
+ClassAndModuleChildren:
+  Enabled: false
+
 # Prefer Kernel#sprintf
 FormatString:
   EnforcedStyle: sprintf
