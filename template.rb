@@ -75,7 +75,7 @@ end
 generate "rspec:install"
 
 # Create .pryrc
-#   Reference: [necojackarc/.pryrc.yml](https://gist.github.com/necojackarc/4b747325a55a1f9deeb0)
+#   Reference: [necojackarc/dotfiles/pryrc](https://github.com/necojackarc/dotfiles/blob/master/pryrc)
 create_file ".pryrc", <<EOS
 # awesome_print
 begin
