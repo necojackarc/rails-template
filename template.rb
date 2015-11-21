@@ -40,11 +40,6 @@ run "bundle install --jobs=4"
 # Convert erb to slim
 run "bundle exec erb2slim -d app/views"
 
-# Install locales
-remove_file 'config/locales/en.yml'
-run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/en.yml -P config/locales/'
-run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml -P config/locales/'
-
 # Add settings to config/application.rb
 application do
   <<-'EOS'
@@ -66,8 +61,7 @@ I18n.enforce_available_locales = true
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
 
-    config.autoload_paths += %W(#{config.root}/lib)
-    config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    config.autoload_paths << Rails.root.join("lib")
   EOS
 end
 
@@ -128,6 +122,10 @@ AllCops:
     - 'Gemfile'
     - 'db/**/*'
 
+# Accept single-line methods with no body
+SingleLineMethods:
+  AllowIfMethodIsEmpty: true
+
 # Top-level documentation of clases and modules are needless
 Documentation:
   Enabled: false
@@ -142,6 +140,10 @@ Lambda:
 
 # Both nested and compact are okay
 ClassAndModuleChildren:
+  Enabled: false
+
+# Specifying param names is unnecessary
+Style/SingleLineBlockParams:
   Enabled: false
 
 # Prefer Kernel#sprintf
@@ -174,9 +176,6 @@ comment_line_pattern = /^\s*#.*\n/
 
 gsub_file ".gitignore", comment_line_pattern, ""
 gsub_file "Gemfile", comment_line_pattern, ""
-
-# Remove files
-remove_file 'README.rdoc'
 
 # Rename files
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss"
