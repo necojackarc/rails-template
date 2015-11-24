@@ -9,6 +9,12 @@ My Rails Application Template
 $ rails new :appname -d :dbname -BT -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
 ```
 
+If you don't use Rails asset pipeline:
+
+```bash
+$ rails new :appname -d :dbname -BTJS --skip-turbolinks -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
+```
+
 ## Additional information
 ### Pry settings
 - [necojackarc / .pryrc.yml - Gist](https://gist.github.com/necojackarc/4b747325a55a1f9deeb0)

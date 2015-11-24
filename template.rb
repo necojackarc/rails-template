@@ -6,7 +6,6 @@ gsub_file ".gitignore", /^config\/secrets.yml\n/, ""
 # Gems
 gem "slim-rails"
 gem "draper"
-gem "kaminari"
 
 gem_group :development do
   gem "html2slim"
