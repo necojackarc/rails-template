@@ -9,10 +9,10 @@ My Rails Application Template
 $ rails new :appname -d :dbname -BT -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
 ```
 
-If you don't use Rails asset pipeline:
+If you don't use Turbolinks:
 
 ```bash
-$ rails new :appname -d :dbname -BTJS --skip-turbolinks -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
+$ rails new :appname -d :dbname -BT --skip-turbolinks -m https://raw.githubusercontent.com/necojackarc/rails-template/master/template.rb
 ```
 
 ## Additional information
