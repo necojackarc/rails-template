@@ -125,7 +125,7 @@ AllCops:
 SingleLineMethods:
   AllowIfMethodIsEmpty: true
 
-# Top-level documentation of clases and modules are needless
+# Top-level documentation of classes and modules are needless
 Documentation:
   Enabled: false
 
