@@ -110,7 +110,6 @@ EOS
 #   Reference: [necojackarc/.rubocop.yml](https://gist.github.com/necojackarc/f3c8323441b1bfc0d4f4)
 create_file ".rubocop.yml", <<EOS
 AllCops:
-  RunRailsCops: true
   Include:
     - '**/Rakefile'
     - '**/config.ru'
@@ -120,6 +119,9 @@ AllCops:
     - 'config/**/*'
     - 'Gemfile'
     - 'db/**/*'
+
+Rails:
+  Enabled: true
 
 # Accept single-line methods with no body
 SingleLineMethods:
@@ -160,6 +162,10 @@ IfUnlessModifier:
 # Maximum method length
 MethodLength:
   Max: 20
+
+# Tuned to MethodLength
+Metrics/AbcSize:
+  Max: 30
 
 # Prefer double_quotes strings unless your string literal contains escape chars
 StringLiterals:
