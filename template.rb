@@ -5,7 +5,7 @@ gsub_file ".gitignore", /^config\/secrets.yml\n/, ""
 
 # Gems
 gem "slim-rails"
-gem "draper"
+gem "draper", ">= 3.0.0.pre1"
 
 gem_group :development do
   gem "html2slim"
