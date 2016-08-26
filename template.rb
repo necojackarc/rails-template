@@ -79,12 +79,20 @@ run 'wget https://gist.githubusercontent.com/necojackarc/f3c8323441b1bfc0d4f4/ra
 # Setup spring
 run 'bundle exec spring binstub rspec'
 
-# Remove comment and empty lines
+# Format .gitignore and Gemfile
 empty_line_pattern = /^\s*\n/
 comment_line_pattern = /^\s*#.*\n/
 
+gsub_file ".gitignore", empty_line_pattern, ""
 gsub_file ".gitignore", comment_line_pattern, ""
 gsub_file "Gemfile", comment_line_pattern, ""
 
-# Rename files
+run "sort .gitignore -uo .gitignore"
+
+# Change the extension of application.css
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss"
+
+# Initialize git
+run "git init"
+run "git add ."
+run "git commit -m 'Initial commit'"

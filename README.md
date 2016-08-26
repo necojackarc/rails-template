@@ -2,7 +2,7 @@
 My Rails Application Template
 
 ## Requirements
-- [simonwhitaker / gibo](https://github.com/simonwhitaker/gibo)
+- [simonwhitaker/gibo](https://github.com/simonwhitaker/gibo)
 
 ## Usage
 ```bash
