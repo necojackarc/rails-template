@@ -17,10 +17,10 @@ $ rails new :appname -d :dbname -BT --skip-turbolinks -m https://raw.githubuserc
 
 ## Additional information
 ### Pry settings
-- [necojackarc / .pryrc.yml - Gist](https://gist.github.com/necojackarc/4b747325a55a1f9deeb0)
+- [necojackarc/dotfiles/pryrc - Github](https://github.com/necojackarc/dotfiles/blob/master/pryrc)
 
 ### Rubocop settings
-- [necojackarc / .rubocop.yml - Gist](https://gist.github.com/necojackarc/f3c8323441b1bfc0d4f4)
+- [necojackarc/.rubocop.yml - Gist](https://gist.github.com/necojackarc/f3c8323441b1bfc0d4f4)
 
 ## References
 - [Rails Application Templates — Ruby on Rails Guides](http://guides.rubyonrails.org/rails_application_templates.html)
