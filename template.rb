@@ -46,7 +46,7 @@ run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
 
 # Add settings to config/application.rb
 application do
-  <<-'EOS'
+  <<-EOS
 I18n.enforce_available_locales = true
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}").to_s]
     config.i18n.default_locale = :en
@@ -64,6 +64,10 @@ I18n.enforce_available_locales = true
         controller_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
+
+    config.autoload_paths += Dir["#{Rails.root}/app/**/concerns"]
+
+    config.time_zone = "UTC"
   EOS
 end
 
