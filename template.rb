@@ -46,7 +46,7 @@ run 'wget https://raw.github.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
 
 # Add settings to config/application.rb
 application do
-  <<-EOS
+  <<-'EOS'
 I18n.enforce_available_locales = true
     config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}").to_s]
     config.i18n.default_locale = :en
@@ -97,6 +97,6 @@ run "sort .gitignore -uo .gitignore"
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss"
 
 # Initialize git
-run "git init"
-run "git add ."
-run "git commit -m 'Initial commit'"
+git :init
+git add: "."
+git commit: "-m 'Initial commit'"
